@@ -1,3 +1,6 @@
+@import "./reset.scss";
+@import "./base.scss";
+
 .container {
   width: 1280px;
   margin: 50px auto;
@@ -14,7 +17,7 @@
         left: 0;
         width: 100px;
         height: 0;
-        border-bottom: 1px solid #f60;
+        border-bottom: 1px solid $active-color;
         transition: left 0.3s;
       }
       .item {
@@ -26,7 +29,49 @@
         line-height: 60px;
         transition: color 0.3s;
         a {
-            color: #f60;
+          color: $font-color;
+        }
+      }
+      .active > a {
+        color: $active-color;
+      }
+    }
+    .page {
+      .item {
+        float: left;
+        width: 16.66%;
+        padding: 10px;
+        box-sizing: border-box;
+        .img {
+          img {
+            width: 100%;
+          }
+        }
+        .info {
+          .title {
+            height: 30px;
+            font-size: 16px;
+            margin-top: 10px;
+            line-height: 30px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          .price {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            color: $active-color;
+          }
+          .others {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            .others-item:last-child {
+              float: right;
+              font-size: 12px;
+            }
+          }
         }
       }
     }

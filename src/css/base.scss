@@ -1,5 +1,8 @@
+$font-color:#333;
+$active-color:#f60;
+
 body {
-  color: #333;
+  color: $font-color;
 }
 
 img {
